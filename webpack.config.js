@@ -44,11 +44,16 @@ const app = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+      },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "/css/style.css",
+      filename: "./css/style.css",
     }),
   ],
 };
